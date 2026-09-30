@@ -1,0 +1,119 @@
+:root {
+  --bg-color: #000000;
+  --card-bg: #0d0d0d;
+  --text-color: #ffffff;
+  --accent-color: #6366f1;
+  --accent-hover: #4f46e5;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-header {
+  width: 100%;
+  padding: 1.25rem 2rem;
+  background-color: var(--card-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.game-selector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.game-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.game-btn.active {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.arcade-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: var(--card-bg);
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.canvas-wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+canvas {
+  background-color: #050505;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.controls-hint {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
